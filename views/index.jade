@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  .container
+        .card
+        .card
+          h1.title Enter info
+          form(action='result', method = 'post')
+            .input-container
+              input(type='#{type}', id='#{label}', required='required', name='long_url')
+              label(for='#{label}') URL
+              .bar
+            .input-container
+              input(type='#{type}', id='#{label}', required='required', name='email')
+              label(for='#{label}') Mail details to
+              .bar
+            .button-container
+              button(type='submit')
+                span Shorten
+            .footer
+              a(href='#') Facing issues?
+        .card.alt
+          .toggle
+          h1.title
+            | More params!
+            .close
+          form
+            .input-container
+              input(type='#{type}', id='#{label}', required='required', name='toadd')
+              label(for='#{label}') Something you want to add
+              .bar
+            .input-container
+              input(type='#{type}', id='#{label}', required='required', name='toignore')
+              label(for='#{label}') Something you don't want
+              .bar
